@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cat.name %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> |
+<%= link_to 'Back', cats_path %>
+
+
+<h2>Lives</h2>
+<ul>
+  <% @cat.lives.each do |life| %>
+  <li><%= link_to life.number, life %></li>
+  <% end %>
+</ul>
+
+<p>
+<%= link_to 'New Life', new_cat_life_path(@cat) %>
+
+</p>
